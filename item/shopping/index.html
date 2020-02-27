@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="易购网，家用电器，手机，电脑，笔记本，数码，百货">
+	<meta name="description" content="上易购网手机版，随时随地，尽享购物乐趣！">
+	<title>易购网</title>
+	<link href="css/base.css" type="text/css" rel="stylesheet">
+	<link href="css/index.css" type="text/css" rel="stylesheet">
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<div class="top_nav">
+				<div class="new_date">
+					<div class="date_child" id="dt">
+						今天是：2019年5月29日&nbsp;星期三&nbsp;&nbsp;&nbsp;&nbsp;上午好！
+					</div>
+				</div>
+				<script>
+					var dts = new Date();
+					var year = dts.getFullYear();
+					var month = dts.getMonth()+1;
+					var date = dts.getDate();
+					var day = dts.getDay();
+					var hours = dts.getHours();
+					var temp;
+					var t = "  ";
+					console.log(dts.getHours());
+					if(hours <= 10){
+						temp = "上午好！";
+					}else if (hours <= 15){
+						temp = "中午好！";
+					}else {
+						temp = "晚上好！";
+					}
+					setInnerText(my$("dt"),"今天是："+year+"年"+month+"月"+date+"日"+t+"星期"+day+t+temp);
+				</script>
+				<div class="menur">
+					<ul>
+						<li><a href="#">收藏夹</a></li>
+						<li><a href="#">购物车</a></li>
+						<li><a href="#">帮助中心</a></li>
+						<li><a href="#">客户留言</a></li>
+						<li><a href="#">设为首页</a></li>
+						<li><a href="#">收藏易购</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="page_wrapper">
+				<div class="pages_nav">
+					<a href="#">首页</a>&gt;&gt;
+					<a href="#">手机/数码/配件</a>&gt;&gt;
+					<a href="#">苹果(Apple)</a>&gt;&gt;
+					<a href="#">APPLE IPHONE 6</a>&gt;&gt;
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="product clearfix">
+		<div class="container">
+			<div class="product_title">APPLE&nbsp;&nbsp; IPHONE &nbsp;&nbsp;6 &nbsp;&nbsp; (64G)&nbsp;&nbsp; (金网通) &nbsp;&nbsp;A1586</div>
+			<div class="product_inner clearfix">
+				<div class="product_img">
+					<div class="prt_img_max" id="max-img">
+						<img src="images/tximg/t01.jpg" alt>
+					</div>
+					<div class="prt_img_min clearfix" id="min-img">
+						<ul>
+							<li class="min_img_mouse">
+								<img src="images/tximg/t01m.jpg" alt>
+							</li>
+							<li>
+								<img src="images/tximg/t02m.jpg" alt>
+							</li>
+							<li>
+								<img src="images/tximg/t03m.jpg" alt>
+							</li>
+							<li>
+								<img src="images/tximg/t04m.jpg" alt>
+							</li>
+						</ul>
+					</div>
+					<div class="btn">
+						<a href="#">
+							<img src="images/common/btn_tuijian.gif" alt>
+						</a>
+						<a href="#">
+							<img src="images/common/btn_shoucang.gif" alt>
+						</a>
+					</div>
+					<script>
+						var maxImg = my$("max-img").children[0];
+						var minImg = my$("min-img").children[0].children;
+						console.log(maxImg);
+						for(var i = 0; i < minImg.length; i++){
+							minImg[i].index = i+1;
+							minImg[i].onclick = function (){
+								maxImg.src = "images/tximg/t0"+this.index+".jpg";
+							}
+							minImg[i].onmouseover = function (){
+								for(var i = 0; i < minImg.length; i++){
+									minImg[i].className = "";
+								}
+								this.className = "min_img_mouse";
+							}
+							
+						}
+					</script>
+				</div>
+				<div class="product_price">
+					<div class="product_list">
+						<ul>
+							<li>易购售价：<span>￥5080.00</span></li>
+							<li>市场售价：<span>￥5798.00</span></li>
+							<li>商品重量：0-1Kg</li>
+							<li>库存情况：<span>有现货</span></li>
+							<li>
+								颜色：
+								<select name="product_color">
+									<option value="0">请选择颜色</option>
+									<option value="red">红</option>
+									<option value="green">绿</option>
+									<option value="blue">蓝</option>
+								</select>
+							</li>
+						</ul>
+					</div>
+					<div class="purchase">
+						我 &nbsp;要 &nbsp;买：<input type="text" value="1"> 件
+						<a href="#" class="shopping">
+							<img src="images/common/btn_buy.gif" alt="立即购买" width="120">
+						</a>
+					</div>
+					<div class="product_link">
+						<div class="product_link_right">【有<span>101</span>人购买了此产品】 【<span>287</span>条收藏记录】 【<span>0</span>条用户咨询】</div>
+						<hr>
+						<div>本商品 &nbsp;易购网 提供货源与配送服务·诚意推荐·品质有保证！</div>
+					</div>	
+				</div>
+				<div class="product_text">
+					<h2>商品卖点</h2>
+					<div>浑然一体的创新设计,拿起iPhone 6的第一感觉，将是它绝佳的手感。表层玻璃边沿以优美流畅的弧度向下延伸，与阳极氧化铝金属机身边框精密衔接、顺滑一体，将精简、惊艳的设计呈现得淋漓尽致。它没有明显的边线和缝隙，它有的，只是金属与玻璃自然融合、浑然一体的美妙感觉。</div>
+					<ul>
+						<li>iPhone的至大之作，也是至薄之作</li>
+						<li>从内在到外在，至精至简</li>
+						<li>一切指点在指边</li>
+						<li>处处精致，造就唯美设计</li>
+						<li>不仅更大，更大放异彩</li>
+					</ul>
+					<a href="#">
+						&gt;&gt;查看详细信息说明
+					</a>
+				</div>
+			</div>
+			<div class="product_info clearfix" id="product-info">
+				<div class="info_left">
+					<h3>商品详细信息</h3>
+					<ul class="info_left_nav clearfix">
+						<li>商品介绍</li>
+						<li>参数规格</li>
+						<li>包装清单</li>
+						<li>售后服务</li>
+					</ul>
+					<div class="info_left_inner">
+						<ul>
+							<li>浑然一本的铝金属和玻璃面设计，使iPhone6在变得更大的同时，用起来却让人感觉恰到好处。</li>
+							<li>
+								<img src="images/iphone602.jpg" alt="苹果手机" width="400">
+							</li>
+							<li>iPhone 6之大，不只是简简单单地放大，而是方方面面都大有提升。它尺寸更大，却纤薄是不可思议；性能更强，却效能非凡。光滑圆润的金属机身，与全新Retina HD高清显示怅精准契合，浑然一体。无论以何种惊讶衡量，这一切，都让不iPhone 6新一代的至大之作，成为至为出众这作。</li>
+						</ul>						
+					</div>
+				</div>
+				<div class="info_right">
+					<h3>同类热卖商品</h3>
+					<ul>
+						<li>
+							<img src="images/t01.jpg" alt>
+							<span>酷派(Coolpad) 大神F2 8675-A</span>
+							<br>
+							<p>￥999.00</p>
+						</li>
+						<li>
+							<img src="images/t02.jpg" alt>
+							<span>小米手机4电信16G</span>
+							<br>
+							<p>￥2049.00</p>
+						</li>
+						<li>
+							<img src="images/t03.jpg" alt>
+							<span>三星手机G5109(白色)</span>
+							<br>
+							<p>￥1488.00</p>
+						</li>
+						<li>
+							<img src="images/t04.jpg" alt>
+							<span>APPLE IPHONE 4S</span>
+							<br>
+							<p>￥1988.00</p>
+						</li>
+						<li>
+							<img src="images/t05.jpg" alt>
+							<span>华为荣耀畅玩4K</span>
+							<br>
+							<p>￥1499.00</p>
+						</li>
+						<li>
+							<img src="images/t06.jpg" alt>
+							<span>诺基亚手机XL 3G升级版 四核处理器</span>
+							<br>
+							<p>￥499.00</p>
+						</li>
+						<li>
+							<img src="images/t07.jpg" alt>
+							<span>微软 Lunia 535 (蓝) 5英寸</span>
+							<br>
+							<p>￥799.00</p>
+						</li>
+						<li>
+							<img src="images/t08.jpg" alt>
+							<span>索尼手机 L50u(白)(索尼Z24G联通版)</span>
+							<br>
+							<p>￥2499.00</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<script>
+				var productInfo = my$("product-info").children[0].children[1].children;
+				// console.log(productInfo.children[1]);
+				for(var i = 0; i < productInfo.length; i++){
+					productInfo[i].style.backgroundColor = "#f00";
+					productInfo[i].style.color = "#fff";
+					productInfo[i].onclick = function (){
+						for(var j = 0; j < productInfo.length; j++){
+							productInfo[j].style.backgroundColor = "#f00";
+							productInfo[j].style.color = "#fff";
+						}
+						this.style.backgroundColor = "#fff";
+						this.style.color = "#f00";
+					};
+				}
+				productInfo[0].style.backgroundColor = "#fff";
+				productInfo[0].style.color = "#f00";
+			</script>
+		</div>
+	</div>
+	<div id="recommend_commodities">
+		<div class="container clearfix">
+			<div class="commodities_left">
+				<h3>推荐商品</h3>
+				<div>
+					<ul>
+						<li>
+							<img src="images/t10.jpg" alt>
+							<span>￥1821.00</span>
+							<p>Apple iPhone 5s (16G)(全)(移动)(双核)(4英寸)...</p>
+							<a href="#">
+								<img src="images/common/btn_1.png" alt>
+								
+							</a>
+							<a href="#">
+								<img src="images/common/btn_2.png" alt>
+							</a>
+						</li>
+						<li>
+							<img src="images/t09.jpg" alt>
+							<span>￥1821.00</span>
+							<p>魅族手机MX4 移动16G 八核 5.36英寸(黑色)...</p>
+							<a href="#">
+								<img src="images/common/btn_1.png" alt>
+							</a>
+							<a href="#">
+								<img src="images/common/btn_2.png" alt>
+							</a>
+						</li>
+						<li>
+							<img src="images/t04.jpg" alt>
+							<span>￥1821.00</span>
+							<p>化为荣耀畅玩4X(Chel-C120) (2GBRAM)全网通4G(白)...</p>
+							<a href="#">
+								<img src="images/common/btn_1.png" alt>
+							</a>
+							<a href="#">
+								<img src="images/common/btn_2.png" alt>
+							</a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+			<div class="commodities_right">
+				<h3>最近浏览过的商品</h3>
+				<ul class="clearfix">
+					<li>
+						<img src="images/t09.jpg" alt>
+						<p>￥2037.00</p>
+					</li>
+					<li>
+						<img src="images/t11.jpg" alt>
+						<p>￥2999.00</p>
+					</li>
+					<li>
+						<img src="images/t10.jpg" alt>
+						<p>￥799.00</p>
+					</li>
+					<li>
+						<img src="images/t03.jpg" alt>
+						<p>￥2617.00</p>
+					</li>
+					<li>
+						<img src="images/t04.jpg" alt>
+						<p>￥4666.00</p>
+					</li>
+					<li>
+						<img src="images/t12.jpg" alt>
+						<p>￥1812.00</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>Copyright &copy; 2013-2018 Tencent. All Rights Reserved 易购网 版权所有</p>
+		<p>设置网面字体大小及其他操作：大 | 中 | 小 | 在线打印 | 关闭</p>
+	</div>
+</body>
+</html>

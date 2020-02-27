@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?kwctdk');
+  src:  url('fonts/icomoon.eot?kwctdk#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kwctdk') format('truetype'),
+    url('fonts/icomoon.woff?kwctdk') format('woff'),
+    url('fonts/icomoon.svg?kwctdk#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-camera:before {
+  content: "\e90f";
+}
+.icon-music:before {
+  content: "\e911";
+}
+.icon-play:before {
+  content: "\e912";
+}
+.icon-connection:before {
+  content: "\e91b";
+}
+.icon-mic:before {
+  content: "\e91e";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-compass:before {
+  content: "\e949";
+}
+.icon-compass2:before {
+  content: "\e94a";
+}
+.icon-keyboard:before {
+  content: "\e955";
+}
+.icon-bubbles:before {
+  content: "\e96c";
+}
+.icon-bin:before {
+  content: "\e9ac";
+}
+.icon-list2:before {
+  content: "\e9bb";
+}
+.icon-download3:before {
+  content: "\e9c7";
+}
+.icon-volume-medium:before {
+  content: "\ea27";
+}
+.icon-ctrl:before {
+  content: "\ea50";
+}
+.icon-page-break:before {
+  content: "\ea68";
+}
+.icon-android:before {
+  content: "\eac0";
+}
+.icon-search:before {
+  content: "\e986";
+}

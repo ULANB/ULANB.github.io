@@ -1,0 +1,239 @@
+body {
+    height:3000px;
+}
+/* start header */
+.header {
+    height:40px;
+    background-color:#333;
+}
+.header a {
+    display:inline-block;
+    height:40px;
+    line-height:40px;
+    font-size:12px;
+    color:#b0b0b0;
+    padding:0 2px;
+}
+.header a:hover {
+    color:#fff;
+}
+.header span {
+    display:inline-block;
+    font-size:12px;
+    color:#424242;
+}
+.hd-left {
+    float:left;
+}
+.hd-right {
+    float:right;
+}
+.shopping {
+    float:right;
+    margin-left:20px;
+    width:120px;
+    color:#b0b0b0;
+    background-color:#424242;
+    text-align:center;
+}
+.shopping:hover {
+    background-color:#fff;
+}
+.shopping:hover a{
+    color:#ff6700;
+}
+.shopping i {
+    font-size:20px;
+    vertical-align:middle;
+}
+.login {
+    float:right;
+}
+
+.stie-header {
+    height:100px;
+    line-height:100px;
+    /* background-color:#ccc; */
+}
+.logo {
+    overflow:hidden;
+    float:left;
+    margin-top:22px;
+    margin-right:180px;
+    width:55px;
+    height:55px;
+    text-indent:-999em;
+    background:#ff6700 url(../images/mi-logo.png) no-repeat center;
+    cursor:pointer;
+}
+.header-nav li {
+    float:left;
+    margin:0 10px;
+    cursor:pointer;
+}
+.header-nav a {
+    color:black;
+}
+.header-nav li:hover a {
+    color:#ff6700;
+}
+
+.header-search {
+    float:right;
+    margin-top:22px;
+    /* width: 296px;
+    height:50px; */
+}
+.header-search input{
+    float:left;
+    width:245px;
+    height:50px;
+    font-size:16px;
+    padding:5px 10px;
+    box-sizing:border-box;
+    border:1px solid #e0e0e0;
+    border-right:none;
+    outline:none;
+}
+.header-search button {
+    float:left;
+    width:52px;
+    height:50px;
+    text-align:center;
+    line-height:50px;
+    border:1px solid #e0e0e0;
+    background-color:#fff;
+}
+.header-search button:hover {
+    background-color:#ff6700;
+    border-color:#ff6700;
+    color:#fff;
+}
+.header-search i {
+    font-size:23px;
+}
+/* end header */
+
+/* start banner */
+.banner {
+    overflow:hidden;
+    height:460px;
+    font-size:14px;
+}
+
+/* start banner侧边导航条 */
+.banner-nav {
+    position:absolute;
+    height:100%;
+    background-color:rgba(0,0,0,.6);
+    z-index:5;
+}
+.banner-nav>ul {
+    padding-top:20px;
+}
+.banner-nav>ul>li {
+    position:relative;
+    width:204px;
+    height:42px;
+    line-height:42px;
+    padding-left:30px;
+    cursor:pointer;
+}
+.banner-nav li:hover {
+    background-color:#ff6700;
+}
+.banner-nav a {
+    color:#fff;
+}
+.banner-nav i {
+    position:absolute;
+    top:0;
+    right:15px;
+    font-size:25px;
+    color:#ccc;
+}
+/* end banner侧边导航条 */
+/* start banner侧边导航条鼠标经过 */
+.children {
+    width:992px;
+    position:absolute;
+    left:100%;
+    top:0;
+    opacity:0;
+}
+.children ul{
+    float:left;
+}
+.children-list {
+    width:248px;
+    height:460px;
+    margin-top:-20px;
+    background-color:#fff;
+}
+/* end banner侧边导航条鼠标经过 */
+
+/* start banner图 */
+.banner-img li {
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+}
+.banner-img img {
+    width:100%;
+}
+/* end banner图 */
+
+/* start 左右点击按钮 */
+.ban-previous,
+.ban-next {
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:41px;
+    height:69px;
+    background:url(../images/icon-slides.png) no-repeat;
+    cursor:pointer;
+}
+.ban-previous {
+    left:234px;
+    background-position:-84px;
+}
+.ban-previous:hover {
+    background-position:0;
+}
+.ban-next {
+    background-position:-125px;
+    right:0;
+}
+.ban-next:hover {
+    background-position:-42px;
+}
+/* end 左右点击按钮 */
+
+/* start banner焦点按钮 */
+.ban-pager {
+    position:absolute;
+    bottom:25px;
+    right:25px;
+}
+.ban-pager li {
+    float:left;
+    width:5px;
+    height:5px;
+    margin:0 4px;
+    border-radius:10px;
+    background-color:rgba(255,255,255,.5);
+    border:3px solid rgba(0,0,0,.3);
+    cursor:pointer;
+}
+.ban-pager li:hover {
+    background-color:rgba(0,0,0,.6);
+    border-color:rgba(255,255,255,.5);
+}
+.ban-pager-hover {
+    background-color:rgba(0,0,0,.6) !important;
+    border-color:rgba(255,255,255,.5) !important;
+}
+/* end banner焦点按钮 */
+/* end banner */

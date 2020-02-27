@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>看音标写音标组合练习</title>
+    
+    <style type="text/css" >
+        #main {
+            width:100%;
+        }
+        #main .hear {
+            background-color: skyblue;
+            width: 200px;
+            height: 200px;
+            margin:0 auto;
+            text-align: center;
+            line-height: 200px;
+            font-size:100px;
+        }
+        #main .buttor input{
+            margin:0 auto;
+            display: block;
+            width: 196px;
+            height: 100px;
+            font-size:80px;
+            text-align:center;
+        }
+        #main .button1 button {
+            margin:0 auto;
+            display: block;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="main">
+        <div style="width:100%; height:50px;font-size: 25px;text-align: center;line-height:50px;">看音标写字母组合</div>
+        <div class="hear" id="broadcast">50</div>
+        <div class="buttor">
+            <input type="text" id="broadcast2" autofocus="autofocus" onkeydown="ddd()"/>
+        </div>
+        <div class="button1">
+            <button type="button" onclick="KGD()" id="btm" >验证</button>
+        </div>
+    </div>
+    <script>
+        function unique(arr){            
+            for(var i=0; i<arr.length; i++){
+                for(var j=i+1; j<arr.length; j++){
+                    if(arr[i]==arr[j]){         //第一个等同于第二个，splice方法删除第二个
+                        arr.splice(j,1);
+                        j--;
+                    }
+                }
+            }
+        return arr;
+        }
+       
+        var chars = ['','ɔ','ʌ','u','ə','i:','ɔ:','a:','u:','ə:','ai','au','ei','eə','iə','uə','ɔi','əu','dʒ','tʃ','ʃ','dz','ts','ʒ','θ','ð','ŋ'];
+        console.log(chars.length);
+        var charɔ = ['o'];
+        var charʌ = ['u','o'];
+        var charu = ['oo'];
+        var charə = ['ure','er','ar','or','a'];
+        var chari$ = ['ee','ea','e'];
+        var charɔ$ = ['a','aw','al','or','oor'];
+        var chara$ = ['a','ar','au','ear'];
+        var charu$ = ['o','oo','ui','u'];
+        var charə$ = ['er','ir','ur','ear','or'];
+        var charai = ['i','y','ie','uy'];
+        var charau = ['ou','ow'];
+        var charei = ['a','ai','ay'];
+        var chareə = ['air','ear'];
+        var chariə = ['ear','eer']; 
+        var charuə = ['oor','our','ure'];
+        var charɔi = ['oi','oy'];
+        var charəu = ['o','oa','ow'];
+        var chardʒ = ['g','j','ge'];
+        var chartʃ = ['ch','tch'];
+        var charʃ = ['s','sh'];
+        var chardz = ['ds','des'];
+        var charts = ['ts','tes'];
+        var charʒ = ['s'];
+        var charθ = ['th'];
+        var charð = ['th'];
+        var charŋ = ['n','ng'];
+
+
+        // 全局变量节点获取
+        var p = document.getElementById('broadcast');
+        var p1 = p.innerHTML;
+        var p2 = document.getElementById('broadcast2').value;
+
+        // 获取节点
+        function numget(){
+            p = document.getElementById('broadcast');
+            p1 = p.innerHTML;
+            p2 = document.getElementById('broadcast2').value;
+        }
+
+        // 随机音标
+        function generateMixed() {
+        var num = "";
+        var id = Math.ceil(Math.random() * 26);
+        var num = chars[id];
+        p.innerText = num;
+        }
+
+        var charʌ1 = [];
+        generateMixed();
+
+        // 刷新文本框：清空
+        function ggg(){
+            document.getElementById('broadcast2').value = "";
+        }
+
+        //判断
+        function kkk(a,p2){
+            for(;;){
+                if(a.includes(p2)){
+                    charʌ1.push(p2);
+                    unique(charʌ1);
+                    if(a.length === charʌ1.length){
+                        alert("恭喜！全部输入正确，答案："+charʌ1+'\n'+"请继续下一个音标的练习");
+                        charʌ1.splice(0);
+                        ggg();
+                        generateMixed();
+                        break;
+                    }else{
+                        alert("总共有"+a.length+"个哦！请继续填写"+'\n'+"以下是你刚才输入的:"+charʌ1+'\n'+"请继续补齐");
+                        break;
+                    }
+                }else{
+                    alert("错误");
+                    break;
+                }
+            }
+        }
+
+        // 点击事件
+        function KGD(){            
+            numget();
+            switch(p1) {
+                case "ɔ":
+                    if(p2 == "o"){
+                        alert("正确");
+                        generateMixed();
+                    }else{
+                        alert("错误");
+                    }
+                    break;
+                case "ʌ":
+                    kkk(charʌ,p2);
+                    break;
+                case "u":
+                    kkk(charu,p2);
+                    break;
+                case "ə":
+                    kkk(charə,p2);
+                    break;
+                case "i:":
+                    kkk(chari$,p2);
+                    break;
+                case "ɔ:":
+                    kkk(charɔ$,p2);
+                    break;
+                case "a:":
+                    kkk(chara$,p2);
+                    break;
+                case "u:":
+                    kkk(charu$,p2);
+                    break;
+                case "ə:":
+                    kkk(charə$,p2);
+                    break;
+                case "ai":
+                    kkk(charai,p2);
+                    break;
+                case "au":
+                    kkk(charau,p2);
+                    break;
+                case "ei":
+                    kkk(charei,p2);
+                    break;
+                case "eə":
+                    kkk(chareə,p2);
+                    break;
+                case "iə":
+                    kkk(chariə,p2);
+                    break;
+                case "uə":
+                    kkk(charuə,p2);
+                    break;
+                case "ɔi":
+                    kkk(charɔi,p2);
+                    break;
+                case "əu":
+                    kkk(charəu,p2);
+                    break; 
+                case "dʒ":
+                    kkk(chardʒ,p2);
+                    break; 
+                case "tʃ":
+                    kkk(chartʃ,p2);
+                    break; 
+                case "ʃ":
+                    kkk(charʃ,p2);
+                    break; 
+                case "dz":
+                    kkk(chardz,p2);
+                    break; 
+                case "ts":
+                    kkk(charts,p2);
+                    break; 
+                case "ʒ":
+                    kkk(charʒ,p2);
+                    break; 
+                case "θ":
+                    kkk(charθ,p2);
+                    break; 
+                case "ð":
+                    kkk(charð,p2);
+                    break; 
+                case "ŋ":
+                    kkk(charŋ,p2);
+                    break;                 
+                default:alert("靠");
+            } 
+            ggg();
+        }
+         
+        //回车响应button按钮
+        function ddd(){
+            if(event.keyCode == 13){
+                document.getElementById('btm').click();
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>
